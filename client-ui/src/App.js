@@ -7,6 +7,7 @@ import Register from './components/auth/Register'
 import Appointment from './components/auth/Appointment'
 import Bookings from './components/auth/Bookings'
 import Show from './components/static/Show'
+import Dashboard from './components/static/Dashboard'
 
 function App (props){
     return(
@@ -22,6 +23,7 @@ function App (props){
              <Route path="/bookings" component={Bookings}/>
              <Route path="/products" component={Products} exact ={true}/>
              <Route path="/products/:id" component={Show}/>
+             <Route path="/dashboard" component={Dashboard}/>
           </Switch>
         </div>
         </BrowserRouter>

@@ -7,7 +7,7 @@ function Products (props){
   }
 return(
     <div>
-        <h2>Jesus Christ Is The Lord:)</h2>
+        <h2>Products Available</h2>
 <CardGroup>
     <Card>
     <Card.Img variant="top" src="https://images-static.nykaa.com/media/catalog/product/8/9/8904000911088.png?tr=w-500,pr-true" />

@@ -11,7 +11,7 @@ function Home(props){
     }
 return(<div><h2 class="text-info">Dental Clinic <FaTooth style={{ color: 'black',fontSize: '36px' }}/><FcGoogle style={{ marginLeft: '48rem' }}/> <a href='https://www.facebook.com'><ImFacebook2 style={{ color: 'blue' }}/> </a> <ImInstagram style={{ color: 'black' }}/></h2>
      <Navbar bg="dark" variant="dark">
-    <Navbar.Brand href="/products">Products</Navbar.Brand>
+    <Navbar.Brand href="/dashboard">Dashboard</Navbar.Brand>
     
     { Object.keys(props.user).length!==0 ?(<div>
       <Nav className="mr-auto">
@@ -28,7 +28,7 @@ return(<div><h2 class="text-info">Dental Clinic <FaTooth style={{ color: 'black'
     <FcCalendar style={{ fontSize: '22px'}}/>
     <DropdownButton variant="primary" title="Book Appointment" style={{ marginLeft: '18rem' }}>
   <Dropdown.Item href="/appointment">Book Now</Dropdown.Item>
-  <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+  <Dropdown.Item href="/products">Products</Dropdown.Item>
   <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
 </DropdownButton>
     <Form inline>
