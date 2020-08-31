@@ -9,4 +9,4 @@
 <img src="images/clinic7.png"/>
 <img src="images/clinic8.png"/>
 <img src="images/clinic9.png"/>
-<img src="images/clinic10.png"/>
+
