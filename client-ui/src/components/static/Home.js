@@ -5,11 +5,20 @@ import {startUserLogout } from '../../actions/userAction'
 import { FcCalendar,FcGoogle } from 'react-icons/fc'
 import { ImFacebook2,ImInstagram } from 'react-icons/im'
 import { FaTooth } from 'react-icons/fa'
+import { FaTwitter } from "react-icons/fa"
+import { FcDonate } from "react-icons/fc"
+import { GrGroup } from "react-icons/gr"
+import { GrMailOption } from "react-icons/gr"
+import { SiWorldhealthorganization } from "react-icons/si"
+import { ImYoutube2 } from "react-icons/im"
 function Home(props){
     const handleLogout=()=>{
       props.dispatch(startUserLogout())
     }
-return(<div><h2 class="text-info">Dental Clinic <FaTooth style={{ color: 'black',fontSize: '36px' }}/><FcGoogle style={{ marginLeft: '48rem' }}/> <a href='https://www.facebook.com'><ImFacebook2 style={{ color: 'blue' }}/> </a> <ImInstagram style={{ color: 'black' }}/></h2>
+    const handleClick=()=>{
+      props.history.push('/appointment')
+    }
+return(<div><h2 class="text-info">Dental Clinic <FaTooth style={{ color: 'black',fontSize: '36px' }}/><a href='https://www.google.com'><FcGoogle style={{ marginLeft: '48rem' }}/></a> <a href='https://www.facebook.com'><ImFacebook2 style={{ color: 'blue' }}/> </a> <a href='https://www.instagram.com'><ImInstagram style={{ color: 'black' }}/></a></h2>
      <Navbar bg="dark" variant="dark">
     <Navbar.Brand href="/dashboard">Dashboard</Navbar.Brand>
     
@@ -29,7 +38,8 @@ return(<div><h2 class="text-info">Dental Clinic <FaTooth style={{ color: 'black'
     <DropdownButton variant="primary" title="Book Appointment" style={{ marginLeft: '18rem' }}>
   <Dropdown.Item href="/appointment">Book Now</Dropdown.Item>
   <Dropdown.Item href="/products">Products</Dropdown.Item>
-  <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+  <Dropdown.Item href="/reviews">Reviews</Dropdown.Item>
+  <Dropdown.Item href="/chat">Chat With Us!</Dropdown.Item>
 </DropdownButton>
     <Form inline>
       <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -76,88 +86,113 @@ return(<div><h2 class="text-info">Dental Clinic <FaTooth style={{ color: 'black'
 <h2 class="text-center">Our Treatments And Services</h2>
 <CardDeck>
   <Card>
-    <Card.Img variant="top" src="https://png.pngtree.com/element_our/png/20181109/millions-of-png-images-backgrounds-and-vectors-for-free-download-png_234087.jpg" />
+    <Card.Img variant="top" src="https://www.pngitem.com/pimgs/m/19-195405_service-icon-dental-fillings-icon-hd-png-download.png" />
     <Card.Body>
-      <Card.Title>Card title</Card.Title>
+      <Card.Title>Dental Fillings</Card.Title>
       <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This content is a little bit longer.
+      A filling is also used to repair broken or 
+      cracked tooth and the teeth which wear off due to dental habits like teeth grinding, nail biting 
       </Card.Text>
     </Card.Body>
     <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
+      <button class="btn btn-danger" onClick={()=>{handleClick()}}> Book Appointment</button>
     </Card.Footer>
   </Card>
   <Card>
-    <Card.Img variant="top" src="https://cdn.pixabay.com/photo/2016/09/14/20/50/teeth-1670434_960_720.png" />
+    <Card.Img variant="top" src="https://icons-for-free.com/iconfiles/png/512/dental+treatment+dentist+dentistry+root+canal+teeth+tooth-1320165690805672917.png" />
     <Card.Body>
-      <Card.Title>Card title</Card.Title>
+      <Card.Title>Root Canal Treatments</Card.Title>
       <Card.Text>
-        This card has supporting text below as a natural lead-in to additional
-        content.{' '}
+      The outer portion or Crown of a tooth is a three-layered structure namely – Enamel, Dentin & Pulp.
+If the tooth decay is limited to the first two layers, it can be corrected with Filling/ Restoration
       </Card.Text>
     </Card.Body>
     <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
+    <button class="btn btn-danger" onClick={()=>{handleClick()}}> Book Appointment</button>
     </Card.Footer>
   </Card>
   <Card>
-    <Card.Img variant="top" src="https://www.vippng.com/png/full/153-1536784_dental-clipart-clean-tooth-brush-teeth.png" />
+    <Card.Img variant="top" src="https://www.absolutesmiles.com.au/wp-content/uploads/2019/01/icon-tooth-extractions-1.png" />
     <Card.Body>
-      <Card.Title>Card title</Card.Title>
+      <Card.Title>Wisdom Teeth Removal</Card.Title>
       <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional.
+      Wisdom teeth often known as third molars are the last teeth to erupt.
+      One usually gets them in late teens or early twenties
       </Card.Text>
     </Card.Body>
     <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
+    <button class="btn btn-danger" onClick={()=>{handleClick()}}> Book Appointment</button>
     </Card.Footer>
   </Card>
 </CardDeck>
 
 <CardDeck>
   <Card>
-    <Card.Img variant="top" src="https://cdn.imgbin.com/3/3/21/imgbin-cartoon-tooth-pathology-healthy-teeth-white-tooth-animated-illustration-wZp25Gcxc3wUPmuUTFcB91rCw.jpg" />
+    <Card.Img variant="top" src="https://www.durbandentalcentre.co.uk/wp-content/uploads/2016/05/clear-aligner.jpg" />
     <Card.Body>
-      <Card.Title>Card title</Card.Title>
+      <Card.Title>Braces & Aligmers</Card.Title>
       <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This content is a little bit longer.
+      Dental braces are appliances which are used to align or
+      straighten the teeth and guide the teeth to the corrected position
       </Card.Text>
     </Card.Body>
     <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
+    <button class="btn btn-danger" onClick={()=>{handleClick()}}> Book Appointment</button>
     </Card.Footer>
   </Card>
   <Card>
-    <Card.Img variant="top" src="https://www.netclipart.com/pp/m/318-3186054_dentist-clipart-dental-work-beautiful-smile-teeth-png.png" />
+    <Card.Img variant="top" src="https://www.absolutesmiles.com.au/wp-content/uploads/2019/01/icon-dental-implants-1.png" />
     <Card.Body>
-      <Card.Title>Card title</Card.Title>
+      <Card.Title>dental Implants</Card.Title>
       <Card.Text>
-        This card has supporting text below as a natural lead-in to additional
-        content.{' '}
+      Dental implants are easily the most popular and also the ideal solution, for replacing your missing tooth/teeth.
+      They have definitely changed the course of dentistry in the last quarter of a century or so
       </Card.Text>
     </Card.Body>
     <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
+    <button class="btn btn-danger" onClick={()=>{handleClick()}}> Book Appointment</button>
     </Card.Footer>
   </Card>
   <Card>
-    <Card.Img variant="top" src="https://e7.pngegg.com/pngimages/273/610/png-clipart-dentistry-human-tooth-dental-public-health-smile-text-people-thumbnail.png" />
+    <Card.Img variant="top" src="https://typebyvox.com/pic_index/dentist.png" />
     <Card.Body>
-      <Card.Title>Card title</Card.Title>
+      <Card.Title>kids Dentistry</Card.Title>
       <Card.Text>
-        This is a wider card with supporting text below as a natural lead-in to
-        additional content. This card has even longer content than the first to
-        show that equal height action.
+      At the age of 6-7 years, humans start losing their milk teeth and the permanent set of teeth start emerging. 
+      Because the milk teeth will eventually fall off, some parents tend to ignore taking their child to a dentist.
       </Card.Text>
     </Card.Body>
     <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
+    <button class="btn btn-danger" onClick={()=>{handleClick()}}> Book Appointment</button>
     </Card.Footer>
   </Card>
 </CardDeck>
+<div class="container" style={{backgroundColor:"lightblue", height:"200px"}}>
+  <div class="row">
+    <div class="col-md-4">
+    <h2 >Support</h2>
+    <FcDonate style={{ fontSize: '36px', marginBottom:9 }}/> Donate<br/>
+    <ImYoutube2 style={{ fontSize: '46px' }}/> our Channel
+    </div>
+    <div class="col-md-4">
+    <h2>Association</h2>
+    <GrGroup style={{ fontSize: '36px',color: 'blue' ,marginBottom:9 }}/> About Us<br/>
+    <GrMailOption style={{ fontSize: '36px', color:"orange",marginBottom:9}}/> Mail Us<br/>
+    <SiWorldhealthorganization style={{ fontSize: '36px'}}/> Choose Version
+
+    </div>
+    <div class="col-md-4">
+    <h2>Follow Us</h2>
+    <FcGoogle style={{ fontSize: '26px',marginBottom:9 }}/> Google<br/>
+    <ImFacebook2 style={{ color: 'blue',fontSize: '26px',marginBottom:9 }}/>Facebook<br/>
+    <ImInstagram style={{ color: 'green',fontSize: '26px',marginBottom:9 }}/>Instagram<br/>
+    <FaTwitter style={{ color: 'black',fontSize: '26px'}}/>Twitter
+    </div>
+
+  </div>
+  {/* <h3>This Is A Footer</h3> */}
+
+</div>
 </div>
 )
 }
