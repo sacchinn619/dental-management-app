@@ -9,6 +9,7 @@ import Bookings from './components/auth/Bookings'
 import Show from './components/static/Show'
 import Dashboard from './components/static/Dashboard'
 import Reviews from './components/static/Reviews'
+import Chat from './components/static/Chat'
 
 function App (props){
     return(
@@ -26,6 +27,7 @@ function App (props){
              <Route path="/products/:id" component={Show}/>
              <Route path="/dashboard" component={Dashboard}/>
              <Route path="/reviews" component={Reviews}/>
+             <Route path="/chat" component={Chat}/>
           </Switch>
         </div>
         </BrowserRouter>
